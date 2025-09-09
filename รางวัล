@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>รางวัล</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+    main {
+      padding: 20px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .video-container {
+      display: none; /
+      margin-top: 20px;
+    }
+    iframe {
+      width: 560px;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>คุณได้รางวัล 🎉</h1>
+  </header>
+
+  <main>
+    <p>กดปุ่มด้านล่างเพื่อรับรางวัล</p>
+    <button onclick="showVideo()">รับรางวัล</button>
+
+     <div class="video-container" id="videoBox">
+      <iframe id="videoFrame" 
+              src="" 
+              title="YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 เว็บไซต์ตัวอย่าง</p>
+  </footer>
+
+  <script>
+    function showVideo() {
+      const videoBox = document.getElementById("videoBox");
+      const videoFrame = document.getElementById("videoFrame");
+
+      videoFrame.src = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+      videoBox.style.display = "block";
+    }
+  </script>
+</body>
+</html>
